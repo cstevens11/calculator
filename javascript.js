@@ -1,3 +1,15 @@
+
+
+let updateDisplay = function () {
+    updatecurrentdisplay(this.textContent)
+    // alert(this.textContent)
+    // let text = e.textContent;
+    // alert(text);
+}
+
+const digits = document.querySelectorAll(".digit");
+digits.forEach(digit => digit.addEventListener('click', updateDisplay));
+
 // add
 let addition = function(a, b) {
     let answer = a + b;
@@ -137,3 +149,5 @@ let operate = function(newoperator, a, b) {
     opActive = false;
 
 }
+
+
