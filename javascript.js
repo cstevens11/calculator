@@ -103,11 +103,11 @@ let updateOP = function(newop) {
 
 let updateNum1 = function () {
     const currentdisplay = document.querySelector(".currentdisplay");
-    number1 = parseInt(currentdisplay.textContent)
+    number1 = Number(currentdisplay.textContent)
 };
 let updateNum2 = function () {
     const currentdisplay = document.querySelector(".currentdisplay");
-    number2 = parseInt(currentdisplay.textContent)
+    number2 = Number(currentdisplay.textContent)
 };
 
 let  showAnswer = function (apple) {
