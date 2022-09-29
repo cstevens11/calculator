@@ -80,6 +80,7 @@ let solve = function() {
 }
 
 let equals = function() {
+    if (operator !== "")
     solve();
     eqActive = true;
 }
@@ -97,8 +98,6 @@ let updateOP = function(newop) {
     opActive = true;
     opChange = true;
     eqActive = false;
-    
-
 }
 
 let updateNum1 = function () {
