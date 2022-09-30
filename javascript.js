@@ -1,4 +1,11 @@
-
+let operator = "";
+let number1 = "";
+let number2 = "";
+let newNumber = false;
+let opActive = false;
+let opChange = false;
+let eqActive = false;
+let deciFix = 1
 
 let updateDisplay = function () {
     updatecurrentdisplay(this.textContent)
@@ -10,23 +17,49 @@ let updateDisplay = function () {
 const digits = document.querySelectorAll(".digit");
 digits.forEach(digit => digit.addEventListener('click', updateDisplay));
 
+
+let deciCheck = function (a, b) {
+    let num1 = a.toString()
+    let num2 = b.toString()
+    let deciPlaces1 = 0
+    let deciPlaces2 = 0
+
+    if (num1.includes(".")) {
+        deciPlaces1 = (num1.split('.')[1]).length
+    }
+    if (num2.includes(".")) {
+        deciPlaces2 = (num2.split('.')[1]).length
+    }
+    let maxDeci = (deciPlaces1 > deciPlaces2 ? deciPlaces1 : deciPlaces2)
+    deciFix = (10 ** maxDeci)
+
+    // console.log(num1)
+    // console.log(deciPlaces1)
+    // console.log(num2)
+    // console.log(deciPlaces2)
+    // console.log(maxDeci)
+    // console.log(deciFix)
+}
 // add
 let addition = function(a, b) {
-    let answer = a + b;
+    deciCheck(a, b)
+    let answer = (((a * deciFix) + (b * deciFix)) / deciFix);
     // console.log(answer)
     number1 = answer;
     showAnswer(answer);
 };
 // subtract
 let subtraction = function(a, b) {
-    let answer = a - b;
+    deciCheck(a, b)
+    let answer = (((a * deciFix) - (b * deciFix)) / deciFix);
     // console.log(answer)
     number1 = answer;
     showAnswer(answer);
 };
 // multiply
 let multiplication = function(a, b) {
-    let answer = a * b;
+    deciCheck(a, b)
+    let answer = (((a * deciFix) * (b * deciFix)) / (deciFix * deciFix));
     // console.log(answer)
     number1 = answer;
     showAnswer(answer);
@@ -34,7 +67,8 @@ let multiplication = function(a, b) {
 // divide
 let division = function(a, b) {
     if (b !== 0) {
-        let answer = a / b; 
+        deciCheck(a, b) 
+        let answer = ((a * deciFix) / (b * deciFix)); 
         // console.log(answer)
         number1 = answer;
         showAnswer(answer);
@@ -43,13 +77,6 @@ let division = function(a, b) {
     }
 }
 
-let operator = "";
-let number1 = "";
-let number2 = "";
-let newNumber = false;
-let opActive = false;
-let opChange = false;
-let eqActive = false;
 
 let reset = function() {
     operator = "";
