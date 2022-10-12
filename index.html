@@ -14,7 +14,7 @@
             <div class = "currentdisplay"></div>
         </div>
         <div class = "calcbuttons">
-            <div class = "numberbtns">
+            <div class = "mainbtns">
                 <button  class = "digit">9</button>
                 <button  class = "digit">8</button>
                 <button  class = "digit">7</button>
@@ -24,19 +24,21 @@
                 <button  class = "digit">3</button>
                 <button  class = "digit">2</button>
                 <button  class = "digit">1</button>
-                <button  class = "digit">0</button>
-                <button  class = "digit">.</button>
-
             </div>
-            <div class = "operatorbtns">
+            <div class = "bottombtns">
+                <button  class = "digit">0</button>
+                <button  class = "decimal">.</button>
+            </div>
+            <div class = "rightbtns">
                 <button onclick="updateOP('add')" class = "operator">+</button>
                 <button onclick="updateOP('subtract')" class = "operator">-</button>
                 <button onclick="updateOP('multiply')" class = "operator">x</button>
                 <button onclick="updateOP('divide')" class = "operator">/</button>
-                <button onclick="equals()" class = "operator">=</button>
             </div>
-            <div class = "fullclear">
+            <div class = "">
+                <button onclick="equals()" class = "operator">=</button>
                 <button onclick="cleardisplay()" class = "clear">Clear</button>
+
             </div>
         </div>
     </div>

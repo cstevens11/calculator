@@ -1,21 +1,38 @@
+// remember to put decimal accuracy solution in scratch file
+
+
 let operator = "";
 let number1 = "";
 let number2 = "";
 let newNumber = false;
+// allows operators to solve and show answer to allow faster use 
 let opActive = false;
+// allows operator to be changed without solving if user clicks wrong one
 let opChange = false;
+// stops operators from saving answer as number2 after equals is used
 let eqActive = false;
 let deciFix = 1
 
 let updateDisplay = function () {
-    updatecurrentdisplay(this.textContent)
+    updatecurrentdisplay(this.textContent);
+    newNumber = false;
     // alert(this.textContent)
     // let text = e.textContent;
     // alert(text);
 }
 
+let addDecimal = function () {
+    const currentdisplay = document.querySelector(".currentdisplay");
+    let current = currentdisplay.textContent;
+    if (current.includes(".") === false || newNumber === true) {
+        updatecurrentdisplay(this.textContent)
+    }
+}
+
 const digits = document.querySelectorAll(".digit");
 digits.forEach(digit => digit.addEventListener('click', updateDisplay));
+const decimal = document.querySelector(".decimal");
+decimal.addEventListener('click', addDecimal)
 
 
 let deciCheck = function (a, b) {
@@ -151,7 +168,7 @@ let updateNum2 = function () {
 let  showAnswer = function (apple) {
     const currentdisplay = document.querySelector(".currentdisplay");
     currentdisplay.textContent = apple;
-    newNumber = false;
+    // newNumber = false;
 
 }
 
@@ -174,7 +191,10 @@ let operate = function(newoperator, a, b) {
         alert("Error, something went wrong!!!");
     };
     opActive = false;
+    newNumber = true;
 
 }
+
+// added newNumber true to operate to fix equals concat issue
 
 

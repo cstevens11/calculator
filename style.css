@@ -1,0 +1,28 @@
+.calcbody {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    padding: 10px;
+    width: 400px;
+    height: 500px;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    background-color: greenyellow;
+    border: solid black 4px;
+    height: 22px;
+    padding: 4px;
+}
+
+.calcbuttons {
+    display: flex;
+    background-color: orangered;
+    padding: 10px;
+}
+
+.mainbtns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
