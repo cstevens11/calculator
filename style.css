@@ -21,10 +21,65 @@
     padding: 10px;
     display: grid;
     grid-gap: 5px;
-    grid-template-areas: ;
-
+    grid-template-areas: 
+    "add subtract multiply divide"
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three clear"
+    "zero zero decimal clear";
 }
 
+.add {
+    grid-area: add;
+}
+.subtract {
+    grid-area: subtract;
+}
+.multiply {
+    grid-area: multiply;
+}
+.divide {
+    grid-area: divide;
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.zero {
+    grid-area: zero;
+}
+.decimal {
+    grid-area: decimal;
+}
+.equal {
+    grid-area: equal;
+}
+.clear {
+    grid-area: clear;
+}
 
 
 /* .mainbtns {
