@@ -17,16 +17,17 @@
 }
 
 .calcbuttons {
-    background-color: orangered;
-    padding: 10px;
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 16px;
     grid-template-areas: 
     "add subtract multiply divide"
     "seven eight nine equal"
     "four five six equal"
     "one two three clear"
     "zero zero decimal clear";
+    background-color: orangered;
+    padding: 40px;
+    height: 400px;
 }
 
 .add {
