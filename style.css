@@ -17,12 +17,17 @@
 }
 
 .calcbuttons {
-    display: flex;
     background-color: orangered;
     padding: 10px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas: ;
+
 }
 
-.mainbtns {
+
+
+/* .mainbtns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
+} */
